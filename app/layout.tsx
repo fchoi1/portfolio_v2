@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto, Oxygen } from "next/font/google";
 
 import Header from "@/components/header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const roboto = Oxygen({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Fabio | Personal Portfolio",

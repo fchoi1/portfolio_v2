@@ -1,9 +1,17 @@
 
+import bikeHavenStroe from '@/assets/images/projects/Bike_Haven_Store/Bike_Haven_Store_1.avif';
+import budgetTracker from '@/assets/images/projects/Budget_Tracker/Budget_Tracker_1.avif';
+import jibberJabber from '@/assets/images/projects/Jibber_Jabber/Jibber_Jabber_1.avif';
+import lidarRobot from '@/assets/images/projects/LIDAR_Robot/LIDAR_Robot_1.avif';
+import pvzRPG from '@/assets/images/projects/PvZ_RPG/PvZ_RPG_1.avif';
+import stewardPlatformMazeSolver from '@/assets/images/projects/Steward_Platform_Maze_Solver/Steward_Platform_Maze_Solver_1.avif';
+import techBlog from '@/assets/images/projects/Tech_Blog/Tech_Blog_1.avif';
+import warehouseAerialManipulator from '@/assets/images/projects/Warehouse_Aerial_Manipulator/Warehouse_Aerial_Manipulator_1.avif';
+
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-
 export const links = [
   {
     name: "Home",
@@ -66,24 +74,27 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Jibber Jabber",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    // imageUrl: corpcommentImg,
+    imageDir: 'Jibber_Jabber',
+    image: jibberJabber
   },
   {
     title: "rmtDev",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    // imageUrl: rmtdevImg,
+    imageDir: 'Bike_Haven_Store',
+    image:  jibberJabber
   },
   {
     title: "Word Analytics",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    imageDir: 'Bike_Haven_Store',
     // imageUrl: wordanalyticsImg,
   },
 ] as const;
