@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Oxygen } from "next/font/google";
+import { Inter, Oxygen, Roboto } from "next/font/google"
 
 import Header from "@/components/header";
 import "./globals.css";

@@ -28,7 +28,12 @@ export default function Intro() {
             className="absolute bottom-0 right-0 text-3xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", delay: 0.1, duration: 0.7, stiffness: 125 }}
+            transition={{
+              type: "spring",
+              delay: 0.1,
+              duration: 0.7,
+              stiffness: 125,
+            }}
           >
             👋
           </motion.span>
@@ -36,10 +41,16 @@ export default function Intro() {
       </div>
 
       <div className=" mb-4 mt-4 sm:mb-10">
-        <motion.h1 className="text-md sm:text-3xl" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
+        <motion.h1
+          className="text-lg sm:text-3xl"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
           <span className="font-bold">Hey there! I'm Fabio</span> I am a{" "}
-          <span className="font-bold">Software Developer</span> and I build things for the web. Sculpting elegant
-          solutions and crafting delightful user experiences. Let's join forces and engineer digital marvels together!
+          <span className="font-bold">Software Developer</span> and I build
+          things for the web. Sculpting elegant solutions and crafting
+          delightful user experiences. Let's join forces and engineer digital
+          marvels together!
         </motion.h1>
       </div>
 
@@ -67,7 +78,8 @@ export default function Intro() {
             outline-none focus:scale-110 hover:scale-110 hover:bg-gray-150 active:scale-105 transition
             flex items-center justify-center px-7 py-3 rounded-full space-x-3 bg-white"
         >
-          <span>View Resume</span> <BsBoxArrowInUpRight className="opacity-60 group-hover:-translate-y-1 transition" />
+          <span>View Resume</span>{" "}
+          <BsBoxArrowInUpRight className="opacity-60 group-hover:-translate-y-1 transition" />
         </a>
         <div className="flex text-sm gap-2 sm:gap-4 sm:text-lg">
           <a
@@ -89,5 +101,5 @@ export default function Intro() {
         </div>
       </motion.div>
     </Section>
-  );
+  )
 }
