@@ -1,46 +1,82 @@
+"use client";
+
 import { projectsData } from "@/lib/data";
-import { promises as fs } from "fs";
+import { getImages } from "@/lib/utils";
+import { useScroll } from "framer-motion";
 import Image from "next/image";
-import path from "path";
-import { use } from "react";
+import { useEffect, useRef, useState } from "react";
+import { BsGithub } from "react-icons/bs";
 
-type Project = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number];
 
-type ProjectProps = {
-  project: Project;
-};
+export default function Project({ title, description, tags, link, imageDir, image }: ProjectProps) {
+  const ref = useRef(null);
+  useScroll({
+    container: "",
+    target: "",
+    offset: ["0 1", "1.33 1"],
+  });
 
-const getImages = async (dir: string) => {
-  const imageDirectory = path.join(process.cwd(), "public/images/projects/", dir);
-  const imageFilenames = await fs.readdir(imageDirectory);
-  return imageFilenames.map((name) => `/images/projects/${dir}/` + name);
-};
-export default function Project({ project }: ProjectProps) {
-  const { title, description, tags, link, imageDir, image } = project;
+  // const [images, setImages] = useState<string[]>([]);
 
-  const images = use(getImages(imageDir));
-  console.log(images);
+  // useEffect(() => {
+  //   const fetchImages = async () => {
+  //     const fetchedImages = await getImages(imageDir);
+  //     setImages(fetchedImages);
+  //   };
+  //   fetchImages();
+  // }, [imageDir]);
+
   return (
-    <section>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
-        {tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
-        ))}
-      </ul>
-      <div>
-        <a href={link} target="_blank">
-          Link
-        </a>
+    <section
+      className="group flex flex-col justify-center items-center hover:bg-gray-200 transition
+    bg-gray-100 max-w-[50rem] border border-black/5 overflow-hidden 
+      sm:block sm:relative sm:pr-8 mb-8 last:mb-0"
+    >
+      <div
+        className="p-4 pb-0 flex flex-col 
+        sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[55%] sm:max-h-80 sm:pb-7 sm:text-left sm:group-even:ml-[48%]"
+      >
+        <h3 className="text-2xl font-semibold flex gap-4 justify-center items-center sm:justify-normal sm:items-start">
+          <span>{title}</span>
+          {link ? (
+            <a
+              className="outline-none transition hover:scale-110 focus:scale-110 border border-black/35 rounded-full p-1"
+              href={link}
+              target="_blank"
+            >
+              <BsGithub />
+            </a>
+          ) : null}
+        </h3>
+        <p className="mt-2 leading-relaxed text-gray-700 h-full">{description}</p>
+        <ul className="py-3 flex flex-wrap justify-center sm:justify-normal sm:mt-4 gap-2 sm:mt-auto">
+          {tags.map((tag, index) => (
+            <li
+              className="bg-black/[0.7] px-3 py-1 text-sm tracking-wider text-white rounded-full"
+              key={index}
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
       </div>
-      <Image src={image} alt={`${title} Image`} quality={95} />
 
-      {images.map((image, index) => (
+      <Image
+        className="sm:absolute top-8 left-[55%] w-3/4 rounded-t-xl shadow-2xl  
+        group-even:left-auto group-even:right-[55%]  transition
+        group-even:group-hover:-translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 
+        group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105"
+        src={image}
+        alt={`${title} Image`}
+        quality={95}
+      />
+
+      {/* {images.map((image, index) => (
         <div key={index}>
           <Image src={image} alt="additional" width={200} height={200} quality={90} />
         </div>
-      ))}
+      ))} */}
     </section>
   );
 }

@@ -75,7 +75,7 @@ export const projectsData = [
   {
     title: "Jibber Jabber",
     description:
-      "This is a simple chat app where users can register/login to message other users online. The homepage contains a custom designed logo and the option to signup or login. Once authenticated, you will be redirected to the dashboard page. This will contain all of our recent chats where you can click on any of the chats and then you get redirected to the personal chat room where you send and receive the messages. ",
+      "This is a simple chat app where users can send messages to other online users in realtime. New users can create accouns view all their chats via the home dashboard page.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     link: "https://github.com/fchoi1/Jibber-Jabber",
     imageDir: "Jibber_Jabber",

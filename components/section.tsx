@@ -21,7 +21,7 @@ export default function Section({ children, addBottom, title }: SectionProps) {
     >
       {title ? (
         <div className="leading-8">
-          <h2 className="text-3xl font-bold capitalize mb-8">{title}</h2>
+          <h2 className="text-3xl font-semibold capitalize mb-8">{title}</h2>
         </div>
       ) : null}
       {children}
