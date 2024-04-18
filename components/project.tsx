@@ -45,10 +45,10 @@ export default function Project({ title, description, tags, link, imageDir, imag
         sm:block sm:relative"
       >
         <div
-          className="p-4 pb-0 flex flex-col 
-        sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[55%] sm:max-h-80 sm:pb-7 sm:text-left sm:group-even:ml-[48%]"
+          className="p-4 pb-0 flex flex-col pl-4
+        md:pl-8 sm:pr-4 sm:pt-8 sm:max-w-[55%] lg:min-h-80 sm:max-h-96 sm:min-h-64 sm:pb-7 sm:text-left sm:group-even:ml-[47%]"
         >
-          <h3 className="text-2xl font-semibold flex gap-4 justify-center items-center sm:justify-normal sm:items-start">
+          <h3 className="text-xl gap-4 font-semibold flex justify-center items-center md:text-2xl sm:justify-normal sm:items-start">
             <span>{title}</span>
             {link ? (
               <a
@@ -60,11 +60,13 @@ export default function Project({ title, description, tags, link, imageDir, imag
               </a>
             ) : null}
           </h3>
-          <p className="mt-2 leading-relaxed text-gray-700 h-full">{description}</p>
-          <ul className="py-3 flex flex-wrap justify-center sm:justify-normal sm:mt-4 gap-2 sm:mt-auto">
+          <p className="mt-2 leading-relaxed text-gray-700 h-full text-xs lg:text-base">
+            {description}
+          </p>
+          <ul className="py-3 flex flex-wrap justify-center text-xs lg:text-sm sm:justify-normal sm:mt-auto gap-2 ">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-sm tracking-wider text-white rounded-full"
+                className="bg-black/[0.7] px-3 py-1 tracking-wider text-white rounded-full"
                 key={index}
               >
                 {tag}

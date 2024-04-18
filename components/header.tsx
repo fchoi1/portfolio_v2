@@ -3,8 +3,11 @@
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState("Home");
+
   return (
     <header className="z-[999] relative">
       <motion.div
