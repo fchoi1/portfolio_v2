@@ -1,6 +1,6 @@
 "use client";
 
-import avatarImg from "@/assets/images/avatar/fabio-choi.png";
+import avatarImg from "@/public/images/avatar/fabio-choi.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,10 +47,9 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
         >
           <span className="font-bold">Hey there! I'm Fabio</span> I am a{" "}
-          <span className="font-bold">Software Developer</span> and I build
-          things for the web. Sculpting elegant solutions and crafting
-          delightful user experiences. Let's join forces and engineer digital
-          marvels together!
+          <span className="font-bold">Software Developer</span> and I build things for the web.
+          Sculpting elegant solutions and crafting delightful user experiences. Let's join forces
+          and engineer digital marvels together!
         </motion.h1>
       </div>
 
@@ -101,5 +100,5 @@ export default function Intro() {
         </div>
       </motion.div>
     </Section>
-  )
+  );
 }

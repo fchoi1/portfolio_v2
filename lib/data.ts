@@ -1,17 +1,16 @@
+import bikeHavenStroe from "@/public/images/projects/Bike_Haven_Store/Bike_Haven_Store_1.png";
+import budgetTracker from "@/public/images/projects/Budget_Tracker/Budget_Tracker_1.png";
+import jibberJabber from "@/public/images/projects/Jibber_Jabber/Jibber_Jabber_1.png";
+import lidarRobot from "@/public/images/projects/LIDAR_Robot/LIDAR_Robot_1.png";
+import pvzRPG from "@/public/images/projects/PvZ_RPG/PvZ_RPG_1.png";
+import stewardPlatformMazeSolver from "@/public/images/projects/Steward_Platform_Maze_Solver/Steward_Platform_Maze_Solver_1.png";
+import techBlog from "@/public/images/projects/Tech_Blog/Tech_Blog_1.png";
+import warehouseAerialManipulator from "@/public/images/projects/Warehouse_Aerial_Manipulator/Warehouse_Aerial_Manipulator_1.png";
 
-import bikeHavenStroe from "@/assets/images/projects/Bike_Haven_Store/Bike_Haven_Store_1.png"
-import budgetTracker from "@/assets/images/projects/Budget_Tracker/Budget_Tracker_1.png"
-import jibberJabber from "@/assets/images/projects/Jibber_Jabber/Jibber_Jabber_1.png"
-import lidarRobot from "@/assets/images/projects/LIDAR_Robot/LIDAR_Robot_1.png"
-import pvzRPG from "@/assets/images/projects/PvZ_RPG/PvZ_RPG_1.png"
-import stewardPlatformMazeSolver from "@/assets/images/projects/Steward_Platform_Maze_Solver/Steward_Platform_Maze_Solver_1.png"
-import techBlog from "@/assets/images/projects/Tech_Blog/Tech_Blog_1.png"
-import warehouseAerialManipulator from "@/assets/images/projects/Warehouse_Aerial_Manipulator/Warehouse_Aerial_Manipulator_1.png"
-
-import React from "react"
-import { CgWorkAlt } from "react-icons/cg"
-import { FaReact } from "react-icons/fa"
-import { LuGraduationCap } from "react-icons/lu"
+import React from "react";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
 export const links = [
   {
     name: "Home",
@@ -37,7 +36,7 @@ export const links = [
     name: "Contact",
     hash: "#contact",
   },
-] as const
+] as const;
 
 export const experiencesData = [
   {
@@ -70,7 +69,7 @@ export const experiencesData = [
     date: "2021 - present",
     type: "job",
   },
-] as const
+] as const;
 
 export const projectsData = [
   {
@@ -85,13 +84,13 @@ export const projectsData = [
   {
     title: "PvZ RPG Game",
     description:
-      "This is a simple chat app where users can register/login to message other users online. The homepage contains a custom designed logo and the option to signup or login. Once authenticated, you will be redirected to the dashboard page. This will contain all of our recent chats where you can click on any of the chats and then you get redirected to the personal chat room where you send and receive the messages. ",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "This was my first RPG Game created in Java. It uses keyboard controls to play. Contains animated fighting scenes, boss fights, and upgradable player. This project taught me the fundamentals of any programming language and this is where the journey began!",
+    tags: ["Java", "Animations", "OOP", "RPG"],
     link: "https://github.com/fchoi1/Java-RGP-PVZ",
-    imageDir: "Jibber_Jabber",
-    image: jibberJabber,
+    imageDir: "PvZ_RPG",
+    image: pvzRPG,
   },
-] as const
+] as const;
 
 export const skillsData = [
   "HTML",

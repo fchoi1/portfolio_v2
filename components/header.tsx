@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { links } from "@/lib/data"
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { links } from "@/lib/data";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -35,5 +35,5 @@ export default function Header() {
         </nav>
       </motion.div>
     </header>
-  )
+  );
 }
