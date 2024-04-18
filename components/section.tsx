@@ -7,14 +7,16 @@ type SectionProps = {
   children: React.ReactNode;
   addBottom?: boolean;
   title?: string;
+  id?: string;
 };
 
-export default function Section({ children, addBottom, title }: SectionProps) {
+export default function Section({ children, id, addBottom, title }: SectionProps) {
   return (
     <motion.section
-      className={`px-2 mt-10 mb-28 max-w-[20rem] text-center sm:px-10 
+      id={id}
+      className={`px-2 mt-10 mb-28 max-w-[20rem] text-center scroll-mt-28
       ${addBottom ? "sm:mb-40" : "sm:mb-0"} 
-       sm:mb-0 sm:max-w-[50rem] box-content`}
+      sm:px-10 sm:max-w-[30rem] md:max-w-[40rem] lg:max-w-[50rem] box-content`}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

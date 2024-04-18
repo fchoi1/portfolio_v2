@@ -6,7 +6,7 @@ import Section from "./section";
 
 export default function projects() {
   return (
-    <Section addBottom title="My projects">
+    <Section addBottom title="My projects" id="projects">
       <div>
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>

@@ -2,7 +2,7 @@ import Section from "./section";
 
 export default function About() {
   return (
-    <Section addBottom title="About me">
+    <Section addBottom title="About me" id="about">
       <div className="leading-8">
         <p className="mb-3 text-sm sm:text-base">
           After graduating with a Bachelor of Applied Science in{" "}

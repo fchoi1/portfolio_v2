@@ -5,11 +5,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRightCircle, BsBoxArrowInUpRight, BsGithub, BsLinkedin } from "react-icons/bs";
-import Section from "./section";
 
 export default function Intro() {
   return (
-    <Section>
+    <section
+      id="home"
+      className="px-2 mt-10 mb-28 max-w-[20rem] text-center scroll-mt-60
+      sm:px-10 sm:mb-0 sm:max-w-[30rem] md:max-w-[40rem] lg:max-w-[50rem] box-content"
+    >
       <div className="py-2 flex items-center justify-center">
         <motion.div
           className="relative"
@@ -57,16 +60,16 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="flex flex-col items-center justify-center p-2 gap-1 font-normal text-xs sm:font-medium sm:text-lg sm:gap-4 sm:flex-row"
+        className="flex flex-col items-center justify-center p-2 gap-1 font-normal text-sm sm:font-medium md:text-lg sm:gap-4 sm:flex-row"
       >
         <Link
           href="#contact"
           className="
             group
             outline-none focus:scale-110 hover:scale-110 hover:bg-gray-150 active:scale-105 transition
-            flex items-center justify-center px-7 py-3 rounded-full space-x-3 bg-gray-900 text-white"
+            flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-gray-900 text-white"
         >
-          <span>Contact me here </span>{" "}
+          <span>Contact me here</span>{" "}
           <BsArrowRightCircle className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
@@ -75,16 +78,16 @@ export default function Intro() {
           className="
             group border border-black/30
             outline-none focus:scale-110 hover:scale-110 hover:bg-gray-150 active:scale-105 transition
-            flex items-center justify-center px-7 py-3 rounded-full space-x-3 bg-white"
+            flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-white"
         >
           <span>View Resume</span>{" "}
           <BsBoxArrowInUpRight className="opacity-60 group-hover:-translate-y-1 transition" />
         </a>
-        <div className="flex text-sm gap-2 sm:gap-4 sm:text-lg">
+        <div className="flex text-sm gap-2 md:gap-4 md:text-lg">
           <a
             href="https://www.linkedin.com/in/fchoi1/"
             target="_blank"
-            className="p-4 rounded-full text-gray-700 bg-white border border-black/30 cursor-pointer
+            className="p-3 md:p-4 rounded-full text-gray-700 bg-white border border-black/30 cursor-pointer
           outline-none focus:scale-[1,15] hover:scale-[1.15] hover:bg-gray-150 active:scale-105 hover:text-gray-950 transition"
           >
             <BsLinkedin />
@@ -92,13 +95,13 @@ export default function Intro() {
           <a
             href="https://github.com/fchoi1"
             target="_blank"
-            className="p-4 rounded-full text-gray-700 bg-white border border-black/30 cursor-pointer
+            className="p-3 md:p-4 rounded-full text-gray-700 bg-white border border-black/30 cursor-pointer
           outline-none focus:scale-[1.15] hover:scale-[1.15] hover:bg-gray-150 active:scale-105 hover:text-gray-950 transition"
           >
             <BsGithub />
           </a>
         </div>
       </motion.div>
-    </Section>
+    </section>
   );
 }
