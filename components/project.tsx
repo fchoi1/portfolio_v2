@@ -42,11 +42,11 @@ export default function Project({ title, description, tags, link, imageDir, imag
       <section
         className="flex flex-col justify-center items-center hover:bg-gray-200 transition
       bg-gray-100 max-w-[50rem] border border-black/5 overflow-hidden rounded-lg hover:shadow-lg
-        sm:block sm:relative"
+        sm:block sm:relative sm:max-h-96 sm:min-h-72"
       >
         <div
-          className="p-4 pb-0 flex flex-col pl-4
-          lg:min-h-80 md:pl-6 md:pr-8 sm:pr-4 sm:pt-8 sm:max-w-[55%] sm:max-h-96 sm:min-h-64 sm:pb-7 sm:text-left
+          className="p-4 pb-0 flex flex-col pl-4 sm:min-h-72
+          lg:min-h-[22rem] md:pl-6 md:pr-8 sm:pr-4 sm:pt-8 sm:max-w-[55%]  sm:pb-7 sm:text-left
           sm:group-even:pr-6 sm:group-even:pl-8 sm:group-even:ml-[47%]"
         >
           <h3 className="text-xl gap-4 font-semibold flex justify-center items-center md:text-2xl sm:justify-normal sm:items-start">

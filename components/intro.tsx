@@ -1,22 +1,15 @@
 "use client";
 
-import { useActiveSectionContext } from "@/context/active-section";
+import { useSectionInView } from "@/lib/hooks";
 import avatarImg from "@/public/images/avatar/fabio-choi.png";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import { BsArrowRightCircle, BsBoxArrowInUpRight, BsGithub, BsLinkedin } from "react-icons/bs";
-import { useInView } from "react-intersection-observer";
 
 export default function Intro() {
-  const { ref, inView } = useInView({ threshold: 0.75 });
-  const { setActiveSection } = useActiveSectionContext();
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("Home");
 
   return (
     <section

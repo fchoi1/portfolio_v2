@@ -8,9 +8,36 @@ import techBlog from "@/public/images/projects/Tech_Blog/Tech_Blog_1.png";
 import warehouseAerialManipulator from "@/public/images/projects/Warehouse_Aerial_Manipulator/Warehouse_Aerial_Manipulator_1.png";
 
 import React from "react";
+import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { DiBackbone, DiRedis } from "react-icons/di";
+import {
+  FaAtlassian,
+  FaAws,
+  FaBootstrap,
+  FaCss3Alt,
+  FaDocker,
+  FaGithub,
+  FaHtml5,
+  FaJava,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
+import { FiFramer } from "react-icons/fi";
+import { GrGraphQl } from "react-icons/gr";
+import { IoLogoJavascript } from "react-icons/io5";
 import { LuGraduationCap } from "react-icons/lu";
+import {
+  SiElasticsearch,
+  SiJquery,
+  SiMicrosoftazure,
+  SiMui,
+  SiPostgresql,
+  SiTailwindcss,
+} from "react-icons/si";
+
 export const links = [
   {
     name: "Home",
@@ -90,26 +117,43 @@ export const projectsData = [
     imageDir: "PvZ_RPG",
     image: pvzRPG,
   },
+  {
+    title: "Warehouse Aerial Manipulator",
+    description:
+      "This was my first RPG Game created in Java. It uses keyboard controls to play. Contains animated fighting scenes, boss fights, and upgradable player. This project taught me the fundamentals of any programming language and this is where the journey began!",
+    tags: ["Java", "Animations", "OOP", "RPG"],
+    link: "https://github.com/fchoi1/Java-RGP-PVZ",
+    imageDir: "PvZ_RPG",
+    image: warehouseAerialManipulator,
+  },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  { skill: "HTML", Icon: FaHtml5 },
+  { skill: "CSS", Icon: FaCss3Alt },
+  { skill: "JavaScript", Icon: IoLogoJavascript },
+  { skill: "TypeScript", Icon: BiLogoTypescript },
+  { skill: "React", Icon: FaHtml5 },
+  { skill: "Backbone.js", Icon: DiBackbone },
+  { skill: "Next.js", Icon: FaHtml5 },
+  { skill: "Node.js", Icon: FaNodeJs },
+  { skill: "Git", Icon: FaGithub },
+  { skill: "Tailwind", Icon: SiTailwindcss },
+  { skill: "MongoDB", Icon: BiLogoMongodb },
+  { skill: "Redux", Icon: FaHtml5 },
+  { skill: "GraphQL", Icon: GrGraphQl },
+  { skill: "Express", Icon: FaHtml5 },
+  { skill: "PostgreSQL", Icon: SiPostgresql },
+  { skill: "Python", Icon: FaPython },
+  { skill: "Elasticsearch", Icon: SiElasticsearch },
+  { skill: "Redis", Icon: DiRedis },
+  { skill: "Docker", Icon: FaDocker },
+  { skill: "Azure Web Services", Icon: SiMicrosoftazure },
+  { skill: "AWS", Icon: FaAws },
+  { skill: "JIRA", Icon: FaAtlassian },
+  { skill: "Bootstrap", Icon: FaBootstrap },
+  { skill: "JQuery", Icon: SiJquery },
+  { skill: "Material UI", Icon: SiMui },
+  { skill: "Golang", Icon: FaGolang },
+  { skill: "Java", Icon: FaJava },
 ] as const;

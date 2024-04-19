@@ -2,12 +2,13 @@
 
 import { useActiveSectionContext } from "@/context/active-section";
 import { links } from "@/lib/data";
+
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Header() {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setLastClickTime } = useActiveSectionContext();
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -37,7 +38,10 @@ export default function Header() {
                   "flex w-full items-center justify-center px-2 py-1 sm:px-3 sm:py-2 hover:text-gray-950 transition",
                   { "text-gray-950": activeSection === link.name }
                 )}
-                onClick={() => setActiveSection(link.name)}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setLastClickTime(Date.now());
+                }}
               >
                 {link.name}
 
