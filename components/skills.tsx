@@ -3,7 +3,6 @@
 import { skillsData } from "@/lib/data";
 
 import { motion } from "framer-motion";
-import React from "react";
 import Section from "./section";
 
 const fadeInAnimationVariants = {
@@ -25,9 +24,12 @@ export default function Skills() {
             }}
             custom={index}
             key={index}
-            className="flex items-center gap-2 bg-white border-black/10 border p-2 rounded-xl hover:scale-105"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex items-center gap-2 bg-white border-black/10 border p-2 rounded-xl  hover:bg-gray-100"
           >
-            {skill} <Icon />
+            <span>{skill}</span> <Icon className="hidden sm:block" />
           </motion.li>
         ))}
       </ul>
