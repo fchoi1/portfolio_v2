@@ -51,7 +51,7 @@ export default function Project({ title, description, tags, link, imageDir, imag
         >
           <h3 className="text-xl gap-4 font-semibold flex justify-center items-center md:text-2xl sm:justify-normal sm:items-start">
             <span>{title}</span>
-            {link ? (
+            {!!link ?? (
               <a
                 className="outline-none transition hover:scale-110 focus:scale-110 border border-black/35 rounded-full p-1"
                 href={link}
@@ -59,7 +59,7 @@ export default function Project({ title, description, tags, link, imageDir, imag
               >
                 <BsGithub />
               </a>
-            ) : null}
+            )}
           </h3>
           <p className="mt-2 leading-relaxed text-gray-700 h-full text-xs lg:text-base">
             {description}
