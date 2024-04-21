@@ -41,7 +41,7 @@ export default function Project({ title, description, tags, link, imageDir, imag
     >
       <section
         className="flex flex-col justify-center items-center hover:bg-gray-200 transition
-      bg-gray-100 max-w-[50rem] border border-black/5 overflow-hidden rounded-lg hover:shadow-lg
+      bg-gray-100 max-w-[50rem] borderBlack overflow-hidden rounded-lg hover:shadow-lg
         sm:block sm:relative sm:max-h-96 sm:min-h-72"
       >
         <div

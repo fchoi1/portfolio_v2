@@ -1,5 +1,6 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/active-section";
 import { useSectionInView } from "@/lib/hooks";
 import avatarImg from "@/public/images/avatar/fabio-choi.png";
 
@@ -10,6 +11,7 @@ import { BsArrowRightCircle, BsBoxArrowInUpRight, BsGithub, BsLinkedin } from "r
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
+  const { setActiveSection, setLastClickTime } = useActiveSectionContext();
 
   return (
     <section
@@ -70,9 +72,13 @@ export default function Intro() {
       >
         <Link
           href="#contact"
+          onClick={() => {
+            setActiveSection("Contact");
+            setLastClickTime(Date.now());
+          }}
           className="
             group
-            outline-none focus:scale-110 hover:scale-110 hover:bg-gray-150 active:scale-105 transition
+            outline-none pseudoEffects transition hover:bg-gray-950
             flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-gray-900 text-white"
         >
           <span>Contact me here</span>{" "}
@@ -83,7 +89,7 @@ export default function Intro() {
           target="_blank"
           className="
             group border border-black/30
-            outline-none focus:scale-110 hover:scale-110 hover:bg-gray-150 active:scale-105 transition
+            outline-none pseudoEffects transition 
             flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-white"
         >
           <span>View Resume</span>{" "}

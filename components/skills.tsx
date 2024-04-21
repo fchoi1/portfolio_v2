@@ -27,7 +27,7 @@ export default function Skills() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 200, damping: 10 }}
             whileTap={{ scale: 0.9 }}
-            className="flex items-center gap-2 bg-white border-black/10 border p-2 rounded-xl  hover:bg-gray-100"
+            className="flex items-center gap-2 bg-white borderBlack p-2 rounded-xl  hover:bg-gray-100"
           >
             <span>{skill}</span> <Icon className="hidden sm:block" />
           </motion.li>

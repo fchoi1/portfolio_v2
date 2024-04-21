@@ -7,9 +7,7 @@ import stewardPlatformMazeSolver from "@/public/images/projects/Steward_Platform
 import techBlog from "@/public/images/projects/Tech_Blog/Tech_Blog_1.png";
 import warehouseAerialManipulator from "@/public/images/projects/Warehouse_Aerial_Manipulator/Warehouse_Aerial_Manipulator_1.png";
 
-import React from "react";
 import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
-import { CgWorkAlt } from "react-icons/cg";
 import { DiBackbone, DiRedis } from "react-icons/di";
 import {
   FaAtlassian,
@@ -22,13 +20,11 @@ import {
   FaJava,
   FaNodeJs,
   FaPython,
-  FaReact,
 } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import { FiFramer } from "react-icons/fi";
 import { GrGraphQl } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
-import { LuGraduationCap } from "react-icons/lu";
 import {
   SiElasticsearch,
   SiJquery,
@@ -68,11 +64,10 @@ export const links = [
 export const experiencesData = [
   {
     title: "Graduated bootcamp",
-    company: "University",
+    company: "University of Toronto",
     location: "Miami, FL",
     description:
       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
     date: "2019",
     type: "academic",
   },
@@ -82,7 +77,6 @@ export const experiencesData = [
     company: "Test Company 2",
     description:
       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
     date: "2019 - 2021",
     type: "job",
   },
@@ -92,7 +86,6 @@ export const experiencesData = [
     company: "Test Company 2",
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
     date: "2021 - present",
     type: "job",
   },

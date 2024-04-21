@@ -3,5 +3,13 @@
 @tailwind utilities;
 
 html {
-  box-sizing: border-box;
+  --line-color: #e5e7eb
+}
+
+.borderBlack {
+  @apply border border-black/10
+}
+
+.pseudoEffects {
+  @apply focus:scale-110 hover:scale-110 active:scale-105
 }
