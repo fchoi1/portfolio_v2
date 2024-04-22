@@ -22,7 +22,6 @@ import {
   FaPython,
 } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
-import { FiFramer } from "react-icons/fi";
 import { GrGraphQl } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import {

@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
-import { Inter, Oxygen, Roboto } from "next/font/google";
- 
 import Header from "@/components/header";
 import ActiveSectionProvider from "@/context/active-section";
+
+import Footer from "@/components/footer";
+import type { Metadata } from "next";
+import { Inter, Oxygen, Roboto } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} h-[5000px] bg-gray-50 text-gray-950`}>
+      <body className={`${inter.className} bg-gray-50 text-gray-950`}>
         {/* dark:bg-[#946263] */}
         {/* dark:bg-[#676394]" */}
         <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
@@ -28,6 +30,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Header />
           {children}
         </ActiveSectionProvider>
+        <Toaster position="top-right" reverseOrder={false} />
+        <Footer />
       </body>
     </html>
   );
