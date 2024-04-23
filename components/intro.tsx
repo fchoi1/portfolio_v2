@@ -84,7 +84,7 @@ export default function Intro() {
           <BsArrowRightCircle className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          href="/CV.pdf"
+          href="/Fabio_Choi_SW.pdf"
           target="_blank"
           className="
             group border border-black/30
