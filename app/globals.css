@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  box-sizing: border-box;
+/* html {
+  --line-color: #e5e7eb
+}
+
+html.dark{
+  --line-color: rgba(255,255,255,0.2)
+} */
+
+.borderBlack {
+  @apply border border-black/10
+}
+
+.pseudoEffects {
+  @apply focus:scale-110 hover:scale-110 active:scale-105
 }
