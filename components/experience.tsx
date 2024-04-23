@@ -14,7 +14,7 @@ export default function experience() {
 
   return (
     <Section title="Experience" id="Experience" wide>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor={theme === "light" ? "gray" : "DimGray"}>
         {experiencesData.map(({ title, company, location, description, date, type }, index) => {
           const { ref, inView } = useInView({
             triggerOnce: true,
@@ -40,7 +40,8 @@ export default function experience() {
                 contentArrowStyle={{ borderRight: "0.4rem solid #9ca3af" }}
                 icon={icon}
                 iconStyle={{
-                  background: theme === "light" ? "white" : "rgba(255,255,255,0.2)",
+                  background: theme === "light" ? "white" : "#383838",
+                  boxShadow: theme === "light" ? "0 0 0 3px darkgray" : "0 0 0 3px WhiteSmoke",
                   fontSize: "1.5rem",
                 }}
                 date={date}
