@@ -42,12 +42,13 @@ export default function Project({ title, description, tags, link, imageDir, imag
       <section
         className="flex flex-col justify-center items-center hover:bg-gray-200 transition
       bg-gray-100 max-w-[50rem] borderBlack overflow-hidden rounded-lg hover:shadow-lg
-        sm:block sm:relative sm:max-h-96 sm:min-h-72"
+        sm:block sm:relative sm:max-h-96 sm:min-h-72
+        dark:bg-white/10 dark:hover:bg-white/30"
       >
         <div
           className="p-4 pb-0 flex flex-col pl-4 sm:min-h-72
           lg:min-h-[22rem] md:pl-6 md:pr-8 sm:pr-4 sm:pt-8 sm:max-w-[55%]  sm:pb-7 sm:text-left
-          sm:group-even:pr-6 sm:group-even:pl-8 sm:group-even:ml-[47%]"
+          sm:group-even:pr-6 sm:group-even:pl-8 sm:group-even:ml-[47%] dark:bg:text-white"
         >
           <h3 className="text-xl gap-4 font-semibold flex justify-center items-center md:text-2xl sm:justify-normal sm:items-start">
             <span>{title}</span>
@@ -61,13 +62,13 @@ export default function Project({ title, description, tags, link, imageDir, imag
               </a>
             )}
           </h3>
-          <p className="mt-2 leading-relaxed text-gray-700 h-full text-xs lg:text-base">
+          <p className="mt-2 leading-relaxed text-gray-700 h-full text-xs lg:text-base dark:text-white/70">
             {description}
           </p>
           <ul className="py-3 flex flex-wrap justify-center text-xs lg:text-sm sm:justify-normal sm:mt-auto gap-2 ">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 tracking-wider text-white rounded-full"
+                className="bg-black/[0.7] px-3 py-1 tracking-wider text-white rounded-full dark:text-white/70"
                 key={index}
               >
                 {tag}
@@ -77,7 +78,7 @@ export default function Project({ title, description, tags, link, imageDir, imag
         </div>
 
         <Image
-          className="sm:absolute top-8 left-[55%] w-3/4 rounded-t-xl shadow-2xl  
+          className="sm:absolute top-8 left-[55%] w-3/4 rounded-t-2xl shadow-2xl  
         group-even:left-auto group-even:right-[55%]  transition
         group-even:group-hover:-translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 
         group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105"

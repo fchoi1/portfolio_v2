@@ -1,7 +1,8 @@
-import Header from "@/components/header";
-import ActiveSectionProvider from "@/context/active-section";
-
 import Footer from "@/components/footer";
+import Header from "@/components/header";
+import ThemeSwitch from "@/components/theme-switch";
+import ActiveSectionProvider from "@/context/active-section";
+import ThemeProvider from "@/context/theme-context";
 import type { Metadata } from "next";
 import { Inter, Oxygen, Roboto } from "next/font/google";
 import { Toaster } from "react-hot-toast";
@@ -21,16 +22,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} bg-gray-50 text-gray-950`}>
+      <body
+        className={`${inter.className} bg-gray-50 text-gray-950 dark:bg-gray-900 dark:text-gray-200  dark:text-opactiy-90`}
+      >
         {/* dark:bg-[#946263] */}
         {/* dark:bg-[#676394]" */}
         <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[1rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
         <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
-        <ActiveSectionProvider>
-          <Header />
-          {children}
-        </ActiveSectionProvider>
-        <Toaster position="top-right" reverseOrder={false} />
+        <ThemeProvider>
+          <ActiveSectionProvider>
+            <Header />
+            {children}
+            <Toaster position="top-right" reverseOrder={false} />
+            <ThemeSwitch />
+          </ActiveSectionProvider>
+        </ThemeProvider>
         <Footer />
       </body>
     </html>

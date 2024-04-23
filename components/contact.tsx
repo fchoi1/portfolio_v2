@@ -26,7 +26,7 @@ export default function Contact() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <p className="text-gray-700 -mt-6 text-sm sm:text-base">
+        <p className="text-gray-700 -mt-6 text-sm sm:text-base  dark:text-white/60">
           Please contact me directly at{" "}
           <a className="underline" href="mailto:fchoi@outlook.com">
             fchoi@outlook.com
@@ -35,12 +35,13 @@ export default function Contact() {
         </p>
         <form
           action={onSubmit}
-          className="mt-10 gap-3 w-full flex flex-col items-start sm:items-center"
+          className="mt-10 gap-3 w-full flex flex-col items-start sm:items-center dark:text-black"
         >
           <input
             name="senderEmail"
             type="email"
-            className="text-sm w-full borderBlack rounded-lg h-10 px-4 sm:h-14 sm:text-base"
+            className="text-sm w-full borderBlack rounded-lg h-10 px-4 sm:h-14 sm:text-base
+            dark:bg-white/80 dark:focus:bg-white dark:outline-none transition-all"
             placeholder="Your email"
             required
             maxLength={5000}
@@ -48,7 +49,8 @@ export default function Contact() {
           <textarea
             name="message"
             required
-            className="text-sm px-4 py-2 w-full h-52 borderBlack rounded-lg  sm:p-4 sm:text-base"
+            className="text-sm px-4 py-2 w-full h-52 borderBlack rounded-lg  sm:p-4 sm:text-base
+            dark:bg-white/80 dark:focus:bg-white dark:outline-none transition-all"
             placeholder="Your message"
           />
           <SubmitButton />

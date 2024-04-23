@@ -3,7 +3,6 @@
 import { useActiveSectionContext } from "@/context/active-section";
 import { useSectionInView } from "@/lib/hooks";
 import avatarImg from "@/public/images/avatar/fabio-choi.png";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -79,7 +78,7 @@ export default function Intro() {
           className="
             group
             outline-none pseudoEffects transition hover:bg-gray-950
-            flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-gray-900 text-white"
+            flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-gray-900 text-white dark:bg-gray-950"
         >
           <span>Contact me here</span>{" "}
           <BsArrowRightCircle className="opacity-70 group-hover:translate-x-1 transition" />
@@ -90,7 +89,7 @@ export default function Intro() {
           className="
             group border border-black/30
             outline-none pseudoEffects transition 
-            flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-white"
+            flex items-center justify-center px-5 sm:px-3 md:px-7 py-2 md:py-3 rounded-full space-x-3 bg-white dark:bg-white/10 dark:hover:text-white"
         >
           <span>View Resume</span>{" "}
           <BsBoxArrowInUpRight className="opacity-60 group-hover:-translate-y-1 transition" />
@@ -100,7 +99,7 @@ export default function Intro() {
             href="https://www.linkedin.com/in/fchoi1/"
             target="_blank"
             className="p-3 md:p-4 rounded-full text-gray-700 bg-white border border-black/30 cursor-pointer
-          outline-none focus:scale-[1,15] hover:scale-[1.15] hover:bg-gray-150 active:scale-105 hover:text-gray-950 transition"
+          outline-none focus:scale-[1,15] hover:scale-[1.15] hover:bg-gray-150 active:scale-105 hover:text-gray-950 transition dark:bg-white/10 dark:text-white/60 dark:hover:text-white"
           >
             <BsLinkedin />
           </a>
@@ -108,7 +107,7 @@ export default function Intro() {
             href="https://github.com/fchoi1"
             target="_blank"
             className="p-3 md:p-4 rounded-full text-gray-700 bg-white border border-black/30 cursor-pointer
-          outline-none focus:scale-[1.15] hover:scale-[1.15] hover:bg-gray-150 active:scale-105 hover:text-gray-950 transition"
+          outline-none focus:scale-[1.15] hover:scale-[1.15] hover:bg-gray-150 active:scale-105 hover:text-gray-950 transition dark:bg-white/10 dark:text-white/60 dark:hover:text-white"
           >
             <BsGithub />
           </a>

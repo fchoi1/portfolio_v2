@@ -1,16 +1,17 @@
 "use client";
 
-import React from "react";
+import { useTheme } from "@/context/theme-context";
+import { experiencesData } from "@/lib/data";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import { useInView } from "react-intersection-observer";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
-import { experiencesData } from "@/lib/data";
 import Section from "./section";
 
 export default function experience() {
+  const { theme } = useTheme();
+
   return (
     <Section title="Experience" id="Experience" wide>
       <VerticalTimeline lineColor="">
@@ -27,15 +28,21 @@ export default function experience() {
               <VerticalTimelineElement
                 visible={inView}
                 contentStyle={{
-                  background: "#f3f4f6",
+                  background: theme === "light" ? "#f3f4f6" : "rgba(255,255,255,0.05)",
                   boxShadow: "none",
-                  border: "1px solid rgba(0,0,0,0.05)",
+                  border:
+                    theme === "light"
+                      ? "1px solid rgba(0,0,0,0.05)"
+                      : "1px solid rgba(255,255,255,0.5)",
                   textAlign: "left",
                   padding: "1.3rem 2rem",
                 }}
                 contentArrowStyle={{ borderRight: "0.4rem solid #9ca3af" }}
                 icon={icon}
-                iconStyle={{ background: "white", fontSize: "1.5rem" }}
+                iconStyle={{
+                  background: theme === "light" ? "white" : "rgba(255,255,255,0.2)",
+                  fontSize: "1.5rem",
+                }}
                 date={date}
                 position={position}
               >
@@ -45,7 +52,7 @@ export default function experience() {
                   <h4 className="font-normal">{company}</h4>
                   <h4>{location}</h4>
                 </div>
-                <p className="!mt-1 font-normal text-gray-500">{description}</p>
+                <p className="!mt-1 font-normal text-gray-500 dark:text-white/50">{description}</p>
               </VerticalTimelineElement>
             </div>
           );
