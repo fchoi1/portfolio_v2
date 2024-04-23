@@ -10,7 +10,6 @@ export default function Contact() {
   async function onSubmit(formData: FormData) {
     const { error } = await sendEmail(formData);
     if (error) {
-      console.log("some err", error);
       toast.error(error);
       return;
     }
@@ -20,7 +19,7 @@ export default function Contact() {
   return (
     <Section id="Contact" title="Contact me" wide>
       <motion.div
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center sm:w-[40rem]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}

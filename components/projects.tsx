@@ -6,7 +6,7 @@ import Section from "./section";
 
 export default function projects() {
   return (
-    <Section title="My projects" id="Projects" threshold={0.5}>
+    <Section title="My projects" id="Projects" threshold={0.3}>
       <div>
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>

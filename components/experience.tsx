@@ -13,7 +13,7 @@ export default function experience() {
   const { theme } = useTheme();
 
   return (
-    <Section title="Experience" id="Experience" wide>
+    <Section title="Experience" id="Experience" wide threshold={0.2}>
       <VerticalTimeline lineColor="" className="!max-w-[100rem]">
         {experiencesData.map(({ title, company, location, description, date, type }, index) => {
           const { ref, inView } = useInView({
@@ -56,16 +56,13 @@ export default function experience() {
                 <ul className="list-[circle] list-outside pl-2">
                   {description.map((line, index) => (
                     <li
-                      className="!mt-1 font-normal !text-sm text-gray-500 dark:text-white/50"
+                      className="!mt-1 font-normal !text-sm text-gray-600 dark:text-white/50"
                       key={index}
                     >
                       {line}
                     </li>
                   ))}
                 </ul>
-                {/* <p className="!mt-1 font-normal !text-sm text-gray-500 dark:text-white/50">
-                  {description}
-                </p> */}
               </VerticalTimelineElement>
             </div>
           );

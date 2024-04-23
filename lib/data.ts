@@ -6,6 +6,7 @@ import pvzRPG from "@/public/images/projects/PvZ_RPG/PvZ_RPG_1.png";
 import stewardPlatformMazeSolver from "@/public/images/projects/Steward_Platform_Maze_Solver/Steward_Platform_Maze_Solver_1.png";
 import techBlog from "@/public/images/projects/Tech_Blog/Tech_Blog_1.png";
 import warehouseAerialManipulator from "@/public/images/projects/Warehouse_Aerial_Manipulator/Warehouse_Aerial_Manipulator_1.png";
+import myPortfolioV1 from "@/public/images/projects/my_portfolio_v1/my_portfolio_v1_1.png";
 
 import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
 import { DiBackbone, DiRedis } from "react-icons/di";
@@ -163,10 +164,19 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Portfolio Website V1",
+    description:
+      "First official website portfolio created to show case newly learned skills. Deployed on Heroku",
+    tags: ["NodeJS", "React", "Material UI", "Express"],
+    link: "https://github.com/fchoi1/my-portfolio",
+    imageDir: "my_portfolio_v1",
+    image: myPortfolioV1,
+  },
+  {
     title: "Jibber Jabber",
     description:
-      "This is a simple chat app where users can send messages to other online users in realtime. New users can create accouns view all their chats via the home dashboard page.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "This is a simple chat app where users can send messages to other online users in realtime. With JWT authentication support, new users can create accouns view all their chats via the home dashboard page.",
+    tags: ["React", "GraphQL", "Express", "MongoDB", "Socket IO", "Material UI"],
     link: "https://github.com/fchoi1/Jibber-Jabber",
     imageDir: "Jibber_Jabber",
     image: jibberJabber,
@@ -183,20 +193,30 @@ export const projectsData = [
   {
     title: "Warehouse Aerial Manipulator",
     description:
-      "This was my first RPG Game created in Java. It uses keyboard controls to play. Contains animated fighting scenes, boss fights, and upgradable player. This project taught me the fundamentals of any programming language and this is where the journey began!",
-    tags: ["Java", "Animations", "OOP", "RPG"],
-    link: "https://github.com/fchoi1/Java-RGP-PVZ",
-    imageDir: "PvZ_RPG",
+      "Designed a drone-mounted manipulator for efficient handling and inventory tracking of small packages in factory settings. Enhanced productivity through aerial coverage and automated inventory scanning",
+    tags: ["Arduino", "C++", "Design", "Image Detection"],
+    link: "https://1drv.ms/p/s!Ap-4bV5caE3xdK1LdPpFxN_whmI?e=Gb9zD0",
+    imageDir: "Warehouse_Aerial_Manipulator",
     image: warehouseAerialManipulator,
   },
   {
-    title: "Portfolio Website V1",
-    description: "First official website portfolio created",
-    tags: ["Java", "Animations", "OOP", "RPG"],
-    link: "https://github.com/fchoi1/my-portfolio",
-    imageDir: "PvZ_RPG",
-    image: warehouseAerialManipulator,
+    title: "Lidar Live streaming Robot",
+    description:
+      "A project I worked on at Linamar to design an autonomous robot that can deliver tool changes using path finding and localization",
+    tags: ["ROS", "ROSJS", "Linux", "Python"],
+    link: "https://github.com/fchoi1/Linabot",
+    imageDir: "LIDAR_Robot",
+    image: lidarRobot,
   },
+  // {
+  //   title: "QLearner Trading Bot",
+  //   description:
+  //     "A project I worked on at Linamar to design an autonomous robot that can deliver tool changes using path finding and localization",
+  //   tags: ["Python", "Reinforcement Learning", "Pandas", "Numpy"],
+  //   link: "https://github.com/fchoi1/Linabot",
+  //   imageDir: "LIDAR_Robot",
+  //   image: lidarRobot,
+  // },
 ] as const;
 
 export const skillsData = [
