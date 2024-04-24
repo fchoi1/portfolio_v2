@@ -58,8 +58,8 @@ export default function Intro() {
           <span className="font-bold">Hey there!</span> My name is{" "}
           <span className="font-bold">Fabio</span> and I am a{" "}
           <span className="font-bold">Software Developer</span> and I build things for the web.
-          Sculpting elegant solutions and crafting delightful user experiences. Let's join forces
-          and engineer digital marvels together!
+          <br />
+          Crafting digital experiences, one keystroke at a time!
         </motion.h1>
       </div>
 

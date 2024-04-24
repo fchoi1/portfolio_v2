@@ -23,7 +23,7 @@ export default function Section({ children, id, title, threshold, wide }: Sectio
       ref={ref}
       className={clsx(
         "flex flex-col items-center justify-center scroll-mt-28 px-2 mt-10 mb-32 max-w-[20rem] text-center sm:mb-40 sm:px-10 sm:max-w-[30rem] md:max-w-[40rem] box-content",
-        { "lg:max-w-[100rem] lg:w-full": wide },
+        { "lg:max-w-[min(80%,100rem)] lg:w-full": wide },
         { "lg:max-w-[50rem]": !wide }
       )}
       initial={{ opacity: 0, y: 100 }}
