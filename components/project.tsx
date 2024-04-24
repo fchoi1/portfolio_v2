@@ -26,6 +26,7 @@ export default function Project({ title, description, tags, link, image }: Proje
   });
 
   // const [images, setImages] = useState<string[]>([]);
+  
   // useEffect(() => {
   //   const fetchImages = async () => {
   //     const fetchedImages = await getImages(imageDir);
