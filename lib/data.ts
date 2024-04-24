@@ -1,10 +1,10 @@
 import bikeHavenStroe from "@/public/images/projects/Bike_Haven_Store/Bike_Haven_Store_1.png";
-import budgetTracker from "@/public/images/projects/Budget_Tracker/Budget_Tracker_1.png";
+// import budgetTracker from "@/public/images/projects/Budget_Tracker/Budget_Tracker_1.png";
 import jibberJabber from "@/public/images/projects/Jibber_Jabber/Jibber_Jabber_1.png";
 import lidarRobot from "@/public/images/projects/LIDAR_Robot/LIDAR_Robot_1.png";
 import pvzRPG from "@/public/images/projects/PvZ_RPG/PvZ_RPG_1.png";
 import stewardPlatformMazeSolver from "@/public/images/projects/Steward_Platform_Maze_Solver/Steward_Platform_Maze_Solver_1.png";
-import techBlog from "@/public/images/projects/Tech_Blog/Tech_Blog_1.png";
+// import techBlog from "@/public/images/projects/Tech_Blog/Tech_Blog_1.png";
 import warehouseAerialManipulator from "@/public/images/projects/Warehouse_Aerial_Manipulator/Warehouse_Aerial_Manipulator_1.png";
 import myPortfolioV1 from "@/public/images/projects/my_portfolio_v1/my_portfolio_v1_1.png";
 

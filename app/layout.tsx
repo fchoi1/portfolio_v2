@@ -4,15 +4,11 @@ import ThemeSwitch from "@/components/theme-switch";
 import ActiveSectionProvider from "@/context/active-section";
 import ThemeProvider from "@/context/theme-context";
 import type { Metadata } from "next";
-import { Inter, Oxygen, Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-const roboto = Oxygen({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Fabio | Personal Portfolio",

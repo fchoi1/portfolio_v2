@@ -1,16 +1,16 @@
 "use client";
 
 import { projectsData } from "@/lib/data";
-import { getImages } from "@/lib/utils";
+// import { getImages } from "@/lib/utils";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { BsGithub } from "react-icons/bs";
 import { TbExternalLink } from "react-icons/tb";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({ title, description, tags, link, imageDir, image }: ProjectProps) {
+export default function Project({ title, description, tags, link, image }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
