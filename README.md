@@ -4,6 +4,7 @@ This is version 2 of my portfolio, made with NextJs
 
 ## Running locally
 
+Install packages,
 First, run the development server:
 
 ```bash
@@ -20,4 +21,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see por
 
 ### Screenshot
 
-![alt text](image.png)
+![alt text](images/screenshot.png)
