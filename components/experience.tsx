@@ -48,7 +48,7 @@ export default function experience() {
                   date={date}
                   // position={position}
                 >
-                  <h3 className="font-semibold captitalize text-lg">{title}</h3>
+                  <h3 className="font-semibold captitalize text-base sm:text-lg">{title}</h3>
 
                   <div className="flex justify-between text-xs flex-col sm:flex-row sm:text-base font-semibold">
                     <h4 className="mt-1">{company}</h4>
@@ -65,7 +65,9 @@ export default function experience() {
                       </li>
                     ))}
                   </ul>
-                  <p className="sm:hidden">{descriptionShort}</p>
+                  <p className="sm:hidden font-normal !text-xs text-gray-600 dark:text-white/50">
+                    {descriptionShort}
+                  </p>
                 </VerticalTimelineElement>
               </div>
             );

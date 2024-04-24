@@ -16,7 +16,7 @@ export default function Skills() {
       <ul className="flex flex-wrap flex-col gap-2 justify-center items-center text-lg text-gray-800">
         {skillsData.map((row, index) => (
           <li key={index}>
-            <ul className="flex flex-row flex-wrap gap-2 justify-center items-center text-lg text-gray-800 lg:flex-nowrap">
+            <ul className="flex flex-row flex-wrap gap-2 justify-center items-center text-lg text-gray-800 ">
               {row.map(({ skill, Icon }, index) => (
                 <motion.li
                   variants={fadeInAnimationVariants}
