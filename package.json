@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "node .next/standalone/server.js -p $PORT",
-    "lint": "next lint"
+    "lint": "next lint",
+    "heroku-cleanup": "rm -rf node_modules src"
   },
   "dependencies": {
     "@react-email/components": "0.0.15",
@@ -14,7 +15,6 @@
     "eslint-config-prettier": "^9.1.0",
     "framer-motion": "^11.1.1",
     "next": "14.2.1",
-    "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18",
     "react-email": "^2.1.2-canary.0",
@@ -34,6 +34,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.1",
     "postcss": "^8",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
