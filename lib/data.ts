@@ -249,20 +249,20 @@ export const projectsData = [
     title: "Warehouse Aerial Manipulator",
     description:
       "Designed a drone-mounted manipulator for efficient handling and inventory tracking of small packages in factory settings. Enhanced productivity through aerial coverage and automated inventory scanning",
-    tags: ["Arduino", "C++", "3D Design", "Image Detection"],
+    tags: ["C++", "Arduino", "3D Design", "Image Detection"],
     link: "https://1drv.ms/p/s!Ap-4bV5caE3xdK1LdPpFxN_whmI?e=Gb9zD0",
     imageDir: "Warehouse_Aerial_Manipulator",
     image: warehouseAerialManipulator,
   },
-  // {
-  //   title: "QLearner Trading Bot",
-  //   description:
-  //     "A project I worked on at Linamar to design an autonomous robot that can deliver tool changes using path finding and localization",
-  //   tags: ["Python", "Reinforcement Learning", "Pandas", "Numpy"],
-  //   link: "https://github.com/fchoi1/Linabot",
-  //   imageDir: "LIDAR_Robot",
-  //   image: lidarRobot,
-  // },
+  {
+    title: "Steward Platform Maze Game",
+    description:
+      "A project that uses a microcontroller to control a steward platform which is a platform held by 6 actuators which enables this system to have 6 degrees of freedom. This was program in C++ and uses sensor data from an IMU (inertial measurement unit) to control tilt and z axis movement.",
+    tags: ["C++", "Arduino", "OOP", "IMU"],
+    link: "https://github.com/fchoi1/stewart-platform",
+    imageDir: "LIDAR_Robot",
+    image: stewardPlatformMazeSolver,
+  },
   // {
   //   title: "QLearner Trading Bot",
   //   description:
