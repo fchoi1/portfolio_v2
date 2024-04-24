@@ -24,8 +24,8 @@ export default function Project({ title, description, tags, link, image }: Proje
     damping: 40,
     restDelta: 0.001,
   });
-  // const [images, setImages] = useState<string[]>([]);
 
+  // const [images, setImages] = useState<string[]>([]);
   // useEffect(() => {
   //   const fetchImages = async () => {
   //     const fetchedImages = await getImages(imageDir);
