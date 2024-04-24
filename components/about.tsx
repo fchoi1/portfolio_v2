@@ -23,9 +23,16 @@ export default function About() {
         <p className="text-sm sm:text-base">
           <span className="italic">When I'm not coding</span>, I enjoy playing video games, working
           out, and playing with my dog. I also enjoy{" "}
-          <span className="font-semibold">solving puzzles</span>; wordle, chess, crosswords, you
-          name it! I am currently pursuing a Masters Degree in CS at{" "}
-          <span className="font-semibold">Georgia Institute of Technology</span> in Machine
+          <span className="font-semibold">solving puzzles</span>;{" "}
+          <a
+            className="underline hover:font-semibold hover:scale-105 hover:text-blue-500"
+            href="https://github.com/fchoi1/Advent-Of-Code"
+            target="_blank"
+          >
+            advent of code
+          </a>
+          , wordle, chess, crosswords, you name it! I am currently pursuing a Masters Degree in CS
+          at <span className="font-semibold">Georgia Institute of Technology</span> in Machine
           Learning.
         </p>
       </div>

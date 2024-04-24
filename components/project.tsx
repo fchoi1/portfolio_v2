@@ -6,6 +6,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
+import { TbExternalLink } from "react-icons/tb";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -52,13 +53,13 @@ export default function Project({ title, description, tags, link, imageDir, imag
         >
           <h3 className="text-xl gap-4 font-semibold flex justify-center items-center md:text-2xl sm:justify-normal sm:items-start">
             <span>{title}</span>
-            {!!link ?? (
+            {link && (
               <a
                 className="outline-none transition hover:scale-110 focus:scale-110 border border-black/35 rounded-full p-1"
                 href={link}
                 target="_blank"
               >
-                <BsGithub />
+                {link.includes("github") ? <BsGithub /> : <TbExternalLink />}
               </a>
             )}
           </h3>
@@ -78,7 +79,7 @@ export default function Project({ title, description, tags, link, imageDir, imag
         </div>
 
         <Image
-          className="sm:absolute top-8 left-[55%] w-3/4 rounded-t-2xl shadow-2xl  
+          className="sm:absolute top-8 left-[55%] h-full w-auto rounded-t-2xl shadow-2xl  
         group-even:left-auto group-even:right-[55%]  transition
         group-even:group-hover:-translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 
         group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105"
