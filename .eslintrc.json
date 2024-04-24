@@ -3,6 +3,5 @@
   "rules": {
     "react/no-unescaped-entities": 0,
     "prefer-const": "error"
-  },
-  "ignores": ["next.config.mjs"]
+  }
 }
