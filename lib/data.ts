@@ -128,7 +128,7 @@ export const experiencesData = [
   {
     title: "B.A.Sc in Mechanical Engineering",
     location: "Waterloo, ON",
-    company: "University of Toronto",
+    company: "University of Waterloo",
     descriptionShort: "Graduated with an Bachelor's of Applied Science in Mechanical Engineering",
     description: ["Graduated with an Bachelor's of Applied Science in Mechanical Engineering"],
     tags: [],
@@ -153,7 +153,7 @@ export const experiencesData = [
   {
     title: "Coding Bootcamp",
     location: "Remote",
-    company: "Univeristy of Toronto Continuing Studies",
+    company: "Univeristy of Toronto",
     descriptionShort:
       "Learned web development, data structures, and algorithms, and practiced with MERN stack and GIT.",
     description: [
