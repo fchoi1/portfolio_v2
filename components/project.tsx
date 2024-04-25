@@ -42,10 +42,10 @@ export default function Project({ title, description, tags, link, image }: Proje
       style={{ scale: scaleY, opacity: opacityProgress }}
     >
       <section
-        className="flex flex-col justify-center items-center hover:bg-gray-200 transition
-      bg-gray-100 max-w-[50rem] borderBlack overflow-hidden rounded-lg hover:shadow-lg
+        className="flex flex-col justify-center items-center sm:hover:bg-gray-200 transition
+      bg-gray-100 max-w-[50rem] borderBlack overflow-hidden rounded-lg sm:hover:shadow-lg
         sm:block sm:relative sm:max-h-96 sm:min-h-72
-        dark:bg-white/10 dark:hover:bg-white/30"
+        dark:bg-white/10 dark:sm:hover:bg-white/30"
       >
         <div
           className="p-4 pb-0 flex flex-col pl-4 sm:min-h-72
@@ -80,10 +80,10 @@ export default function Project({ title, description, tags, link, image }: Proje
         </div>
 
         <Image
-          className="sm:absolute top-8 left-[55%] h-full w-auto rounded-t-2xl shadow-2xl  
+          className="sm:absolute top-8 left-[55%] w-72 h-auto sm:h-full sm:w-auto rounded-t-2xl shadow-2xl  
         group-even:left-auto group-even:right-[55%]  transition
-        group-even:group-hover:-translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 
-        group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105"
+        sm:group-even:group-hover:-translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-2 
+        sm:group-hover:translate-x-3 sm:group-hover:translate-y-3 sm:group-hover:-rotate-2 sm:group-hover:scale-105"
           src={image}
           alt={`${title} Image`}
           quality={95}
