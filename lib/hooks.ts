@@ -1,6 +1,6 @@
 import { useActiveSectionContext } from "@/context/active-section";
-import type { SectionName } from "@/lib/types";
-import { useEffect } from "react";
+import type { MousePosition, SectionName } from "@/lib/types";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export function useSectionInView(id: SectionName, threshold = 0.75) {
@@ -11,4 +11,21 @@ export function useSectionInView(id: SectionName, threshold = 0.75) {
   }, [id, inView, setActiveSection, lastClickTime]);
 
   return { ref };
+}
+
+export function useMousePosition() {
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
+
+  const updateMousePostion = (e: MouseEvent) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", updateMousePostion);
+    return () => {
+      window.removeEventListener("mousemove", updateMousePostion);
+    };
+  }, []);
+
+  return mousePosition;
 }
