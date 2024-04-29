@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-email/components": "0.0.15",
+    "@vercel/analytics": "^1.2.2",
     "clsx": "^2.1.0",
     "eslint-config-prettier": "^9.1.0",
     "framer-motion": "^11.1.1",

@@ -2,45 +2,38 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import { motion } from "framer-motion";
-import toast from "react-hot-toast";
+import { FormEvent } from "react";
 import Section from "./section";
 import SubmitButton from "./submit-button";
 
 export default function Contact() {
   async function onSubmit(formData: FormData) {
-    const { error } = await sendEmail(formData);
-    if (error) {
-      toast.error(error);
-      return;
-    }
-    toast.success("Email sent successfully");
+    const data = await sendEmail(formData);
+
+    console.log("res", data);
   }
 
   return (
     <Section id="Contact" title="Contact me" wide>
       <motion.div
-        className="flex flex-col items-center justify-center sm:w-[40rem]"
+        className="w-[max(100%,38rem)] flex flex-col items-center justify-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <p className="text-gray-700 -mt-6 text-sm sm:text-base  dark:text-white/60">
+        <p className="text-gray-700 -mt-6">
           Please contact me directly at{" "}
           <a className="underline" href="mailto:fchoi@outlook.com">
             fchoi@outlook.com
           </a>{" "}
           or through this form
         </p>
-        <form
-          action={onSubmit}
-          className="mt-10 gap-3 w-full flex flex-col items-start sm:items-center dark:text-black"
-        >
+        <form action={onSubmit} className="mt-10 gap-3 w-full flex flex-col items-center">
           <input
             name="senderEmail"
             type="email"
-            className="text-sm w-full borderBlack rounded-lg h-10 px-4 sm:h-14 sm:text-base
-            dark:bg-white/80 dark:focus:bg-white dark:outline-none transition-all"
+            className="w-full borderBlack rounded-lg h-14 px-4"
             placeholder="Your email"
             required
             maxLength={5000}
@@ -48,8 +41,7 @@ export default function Contact() {
           <textarea
             name="message"
             required
-            className="text-sm px-4 py-2 w-full h-52 borderBlack rounded-lg  sm:p-4 sm:text-base
-            dark:bg-white/80 dark:focus:bg-white dark:outline-none transition-all"
+            className="p-4 w-full h-52 borderBlack rounded-lg"
             placeholder="Your message"
           />
           <SubmitButton />
