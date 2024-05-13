@@ -22,6 +22,7 @@ import {
   FaNodeJs,
   FaPython,
   FaReact,
+  FaJenkins,
 } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import { GrGraphQl } from "react-icons/gr";
@@ -34,6 +35,7 @@ import {
   SiMui,
   SiPostgresql,
   SiTailwindcss,
+  SiTravisci,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
@@ -311,5 +313,7 @@ export const skillsData = [
     { skill: "AWS", Icon: FaAws },
     { skill: "JIRA", Icon: FaAtlassian },
     { skill: "Git", Icon: FaGithub },
+    { skill: "Jenkins", Icon: FaJenkins },
+    { skill: "Travis", Icon: SiTravisci },
   ],
 ] as const;
